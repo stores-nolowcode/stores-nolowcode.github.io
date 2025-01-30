@@ -1,13 +1,10 @@
-import { parseJwt } from "../../utils/index.js";
+import { showMessage, getFormData } from "../../utils/index.js";
 
-console.log("...login page...");
+const handleLogin = (event) => {
+    const formObject = getFormData(event)
 
-window.handleSubmit = async (event) => {
-    event.preventDefault(); // ป้องกันการ reload หน้าเว็บ
+    console.log('formObject: ', formObject);
+    showMessage(formObject)
+}
 
-    const form = event.target; // ดึง <form> ที่ถูก submit
-    const data = new FormData(form);
-    const formObject = Object.fromEntries(data); // แปลงเป็น object
-
-    console.log(formObject); // แสดงผลในรูปแบบ { username: "...", password: "..." }
-};
+window.handleLogin = handleLogin;
