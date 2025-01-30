@@ -2,12 +2,14 @@ import { getBasePath } from "../utils/index.js"
 
 export const getMeta = () => {
     let basePath = getBasePath();
-    console.log('basePath: ', basePath)
-    // ลบ /pages ออกจาก basePath ถ้ามี
-    if (basePath.includes('pages/')) {
-        basePath = basePath.replace('pages/', '');
+    console.log('basePath (before modification): ', basePath);
+
+    // ปรับ basePath ให้รองรับกรณีที่เป็น relative path ("../") และมี "pages/"
+    if (window.location.pathname.includes('/pages/')) {
+        basePath = basePath.replace(/(\.\.\/)*pages\//, '');
     }
-    console.log('newBasePath: ', basePath)
+
+    console.log('basePath (after modification): ', basePath);
 
     return /* html */ `
         <meta charset="UTF-8" />
@@ -22,4 +24,3 @@ export const getMeta = () => {
         <link rel="stylesheet" href="${basePath}assets/styles/index.css">
     `;
 };
-
