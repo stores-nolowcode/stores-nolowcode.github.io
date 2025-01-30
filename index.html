@@ -1,28 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+layout: default
+title: Home
+---
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- Favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/public/favicon/apple-touch-icon.png" />
-  <link rel="icon" type="image/png" sizes="32x32" href="/public/favicon/favicon-32x32.png" />
-  <link rel="icon" type="image/png" sizes="16x16" href="/public/favicon/favicon-16x16.png" />
-  <title>Home</title>
-  <script defer src="index.js"></script>
-</head>
+<h2>Welcome to My Website</h2>
+<p>This is a test page using Jekyll layouts.</p>
 
-<body>
-  <div class="header"></div>
-
-  <main>
-    <h1>Welcome to My Website</h1>
-    <p>This is the homepage.</p>
-  </main>
-
-  <div class="footer"></div>
-
-  <script type="module" src="app.js"></script>
-</body>
-
-</html>
+{% include scripts/index_script.html %}

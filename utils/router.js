@@ -1,5 +1,6 @@
 export const route = () => {
     const url = new URL(window.location.href);
+    const cleanHash = window.location.hash.split("?")[0].replace("#", ""); // ตัด query params ออกจาก hash
 
     return {
         origin: url.origin,      // ต้นทาง เช่น "https://example.com"
@@ -8,7 +9,7 @@ export const route = () => {
         protocol: url.protocol.replace(":", ""), // "https"
         path: url.pathname,      // "/pages/login"
         query: Object.fromEntries(url.searchParams.entries()), // Query Params เป็น Object
-        hash: url.hash.replace("#", ""), // "#section1" → "section1"
+        hash: cleanHash, // เอาเฉพาะค่า hash ที่ไม่ติด query params
         full: url.href           // URL เต็ม
     };
 };
