@@ -4,9 +4,9 @@ export const getMeta = () => {
     let basePath = getBasePath();
     console.log('basePath (before modification): ', basePath);
 
-    // ปรับ basePath ให้รองรับกรณีที่เป็น relative path ("../") และมี "pages/"
+    // ตรวจสอบว่าอยู่ใน path ที่มี "/pages/" หรือไม่
     if (window.location.pathname.includes('/pages/')) {
-        basePath = basePath.replace(/(\.\.\/)*pages\//, '');
+        basePath = window.location.pathname.replace(/\/pages\/.*/, '/');
     }
 
     console.log('basePath (after modification): ', basePath);
