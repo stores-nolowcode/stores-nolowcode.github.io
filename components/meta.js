@@ -1,7 +1,12 @@
 import { getBasePath } from "../utils/index.js"
 
 export const getMeta = () => {
-    const basePath = getBasePath();
+    let basePath = getBasePath();
+
+    // ลบ /pages ออกจาก basePath ถ้ามี
+    if (basePath.includes('pages/')) {
+        basePath = basePath.replace('pages/', '');
+    }
 
     return /* html */ `
         <meta charset="UTF-8" />
