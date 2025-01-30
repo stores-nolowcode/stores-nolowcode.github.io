@@ -1,4 +1,4 @@
-import { parseJwt } from "../../scripts/auth/jwt.js";
+import { parseJwt } from "../../utils/index.js";
 
 console.log("...login page");
 
