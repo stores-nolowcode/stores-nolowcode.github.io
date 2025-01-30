@@ -9,19 +9,21 @@
 
 <body>
   <h1>Login</h1>
-  <form onsubmit="return handleLogin(event)">
+  <form onsubmit="handleSubmit(event)">
     <div>
       <label for="username">Username</label>
-      <input type="text" id="username" name="username" placeholder="Username" />
+      <input type="text" name="username" placeholder="Username" />
     </div>
     <div>
       <label for="password">Password</label>
-      <input type="password" id="password" name="password" placeholder="Password" />
+      <input type="password" name="password" placeholder="Password" autocomplete="on" />
     </div>
     <button type="submit">Submit</button>
   </form>
   <pre class="result"></pre>
+
   <script type="module" src="./index.js"></script>
+
 </body>
 
 </html>
