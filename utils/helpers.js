@@ -75,3 +75,8 @@ export const getFormData = (event) => {
         return formObject;
     })();
 };
+
+export const getBasePath = () => {
+    const depth = window.location.pathname.split('/').filter(Boolean).length;
+    return depth > 1 ? "../".repeat(depth - 1) : "";
+}

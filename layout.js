@@ -1,6 +1,10 @@
+import { getMeta } from "./components/meta.js";
 import { getHeader } from "./components/header.js";
 import { getFooter } from "./components/footer.js";
 
-// ใส่ Header และ Footer ใน DOM
+// ใส่ Meta ใน <head>
+document.head.innerHTML += getMeta();
+
+// ใส่ Header และ Footer
 document.querySelector(".header").innerHTML = getHeader();
 document.querySelector(".footer").innerHTML = getFooter();
