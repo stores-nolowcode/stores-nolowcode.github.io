@@ -1,11 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>404</title>
-  </head>
-  <body>
-    <h1>404</h1>
-  </body>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="refresh" content="0; url=/">
+  <script>
+    // ถ้า Browser รองรับ JavaScript → Redirect ไปที่ `index.html` พร้อม Path เดิม
+    window.location.replace("/" + window.location.pathname + window.location.search);
+  </script>
+  <title>Redirecting...</title>
+</head>
+
+<body>
+  <h2>Redirecting...</h2>
+  <p>If you are not redirected, <a href="/">click here</a>.</p>
+</body>
+
 </html>

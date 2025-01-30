@@ -1,12 +1,13 @@
 export const getHeader = () => {
-    return /* html */`
+    return /* html */ `
         <header>
             <h1>My Website</h1>
             <nav>
-                <a href="/">Home</a>
-                <a href="/about.html">About</a>
-                <a href="/contact.html">Contact</a>
+                <a href="/" data-link>Home</a>
+                <a href="/about" data-link>About</a>
+                <a href="/contact" data-link>Contact</a>
+                <a href="/login" data-link>Login</a>
             </nav>
         </header>
     `;
-}
+};

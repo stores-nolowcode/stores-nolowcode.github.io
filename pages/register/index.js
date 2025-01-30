@@ -1,10 +1,8 @@
-import { showMessage, getFormData } from "../../utils/index.js";
-
-const handleRegister = (event) => {
-    const formObject = getFormData(event)
-
-    console.log('formObject: ', formObject);
-    showMessage(formObject)
+export const getPageContent = () => {
+    return /* html */ `
+        <main>
+            <h1>Welcome to Register Page</h1>
+            <p>This is the registerpage.</p>
+        </main>
+    `;
 }
-
-window.handleRegister = handleRegister;

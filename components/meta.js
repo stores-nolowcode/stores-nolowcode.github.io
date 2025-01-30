@@ -44,7 +44,7 @@ import { getBasePath } from "../utils/index.js"
 export const getMeta = () => {
     const basePath = getBasePath();
 
-    return /* html */`
+    return /* html */ `
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         

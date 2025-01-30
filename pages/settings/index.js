@@ -1,10 +1,8 @@
-// import { showMessage, getFormData } from "../../utils/index.js";
-
-// const handleLogin = (event) => {
-//     const formObject = getFormData(event)
-
-//     console.log('formObject: ', formObject);
-//     showMessage(formObject)
-// }
-
-// window.handleLogin = handleLogin;
+export const getPageContent = () => {
+    return /* html */ `
+        <main>
+            <h1>Welcome to Settings Page</h1>
+            <p>This is the settingspage.</p>
+        </main>
+    `;
+}
