@@ -77,6 +77,9 @@ export const getFormData = (event) => {
 };
 
 export const getBasePath = () => {
-    const depth = window.location.pathname.split('/').filter(Boolean).length;
-    return depth > 1 ? "../".repeat(depth - 1) : "";
-}
+    const pathSegments = window.location.pathname.split('/').filter(Boolean); // แยก path ออกเป็น array
+    const depth = pathSegments.length;
+
+    // ถ้าความลึกของ path มากกว่า 1 (เช่น /something/page.html)
+    return depth > 1 ? "../".repeat(depth - 1) : "./";
+};

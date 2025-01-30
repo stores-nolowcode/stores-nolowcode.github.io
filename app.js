@@ -1,8 +1,6 @@
 import routes from "./config/routes.js";
 import { getBasePath } from "./utils/index.js";
 
-console.log('path: ', "https://stores-nolowcode.github.io/pages/login/?cache=1".includes("pages/"))
-
 // const app = document.querySelector("#app");
 
 // async function loadPage(url) {

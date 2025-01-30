@@ -1,7 +1,7 @@
 export const getFooter = () => {
     return /* html */ `
-        <footer>
-            <p>&copy; 2025 My Website. All rights reserved.</p>
-        </footer>
+        <div class="container">
+            <p class="m-0 text-muted">&copy; 2024 My Website</p>
+        </div>
     `;
-}
+};

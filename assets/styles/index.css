@@ -1,42 +1,14 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-body[data-layout="default"] {
-    background: #f9f9f9;
-    font-family: Arial, sans-serif;
-}
-
-body[data-layout="blank"] {
-    background: white;
-    text-align: center;
-}
-
-body[data-layout="dashboards"] {
-    background: #222;
-    color: white;
-}
-
-header {
-    background: #333;
-    color: white;
-    padding: 10px;
-    text-align: center;
-}
-
-nav a {
-    color: white;
-    margin: 0 10px;
-    text-decoration: none;
-}
-
-footer {
-    background: #eee;
-    padding: 10px;
-    text-align: center;
+.sidebar {
+    height: 100vh; /* ✅ ให้ Sidebar เต็มความสูง */
     position: fixed;
-    bottom: 0;
-    width: 100%;
+    top: 0;
+    left: 0;
+    width: 250px;
+    overflow-y: auto;
+    box-shadow: 2px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.content {
+    margin-left: 250px; /* ✅ ป้องกัน Sidebar ทับเนื้อหา */
+    padding: 20px;
 }
