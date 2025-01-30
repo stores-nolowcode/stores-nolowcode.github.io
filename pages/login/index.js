@@ -1,6 +1,6 @@
 import { parseJwt } from "../../utils/index.js";
 
-console.log("...login page");
+console.log("...login page...");
 
 // ✅ จำลองการเรียก API (Mock API)
 async function login(username, password) {
